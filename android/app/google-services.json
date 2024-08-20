@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "839572270931",
+    "project_id": "ht5yt45y",
+    "storage_bucket": "ht5yt45y.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839572270931:android:b1af24beaa84d8ac537ba6",
+        "android_client_info": {
+          "package_name": "com.example.taskrootallyai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCBW3xfzabTAXDk0WgDd6SX3X_TPjuQ1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
