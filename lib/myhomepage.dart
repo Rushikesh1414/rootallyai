@@ -107,83 +107,73 @@ class _MyAssessmentsTabState extends State<MyAssessmentsTab> {
                               margin: const EdgeInsets.symmetric(
                                 vertical: 0.0,
                               ),
-                              child: InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => Assessmentsdetailscreen(),
-                                                ),
-                                              );
-                                            },
+                              child: Row(
+                                children: [
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => Assessmentsdetailscreen(),
+                                        ),
+                                      );
+                                    },
+                                    child: Image.network(
+                                      imageUrl,
+                                      height: 100,
+                                      width: 130,
 
-                                child: Row(
-                                  children: [
-                                    InkWell(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => Assessmentsdetailscreen(),
-                                          ),
-                                        );
-                                      },
-                                      child: Image.network(
-                                        imageUrl,
-                                        height: 100,
-
-                                      ),
                                     ),
-                                    SizedBox(
-                                      width: 5,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          assessmentsDocs[index]['title'],
+                                          style: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 16,
+                                            color: Color(0xFF222E58),
+                                          ),
+                                          // overflow: TextOverflow.ellipsis,
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          assessmentsDocs[index]['description'],
+                                          style: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 10,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Image.asset(
+                                                'assets/images/ant-design_play-circle-filled.png'),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text("Start",
+                                                style: GoogleFonts.poppins(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 14,
+                                                  color: Color(0xFF222E58),
+                                                ))
+                                          ],
+                                        )
+                                      ],
                                     ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            assessmentsDocs[index]['title'],
-                                            style: GoogleFonts.poppins(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 16,
-                                              color: Color(0xFF222E58),
-                                            ),
-                                            // overflow: TextOverflow.ellipsis,
-                                          ),
-                                          SizedBox(
-                                            height: 10,
-                                          ),
-                                          Text(
-                                            assessmentsDocs[index]['description'],
-                                            style: GoogleFonts.poppins(
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 10,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 10,
-                                          ),
-                                          Row(
-                                            children: [
-                                              Image.asset(
-                                                  'assets/images/ant-design_play-circle-filled.png'),
-                                              SizedBox(
-                                                width: 5,
-                                              ),
-                                              Text("Start",
-                                                  style: GoogleFonts.poppins(
-                                                    fontWeight: FontWeight.w600,
-                                                    fontSize: 14,
-                                                    color: Color(0xFF222E58),
-                                                  ))
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
+                                  )
+                                ],
                               ),
                             );
                           }),
@@ -283,21 +273,37 @@ class _MyAppointmentsTabState extends State<MyAppointmentsTab> {
           SizedBox(
             height: 10,
           ),
-          Container(
-            width: 180,
-            height: 120,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('assets/images/Group 1171274978.png'),
-                Text("Fitness Appointment")
-              ],
-            ),
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle, // Default shape is rectangle
-              borderRadius: BorderRadius.circular(10),
-              color: Color(0xFFFFD4C6), // Rounded corners (optional)
-            ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  // width: 180,
+                   height: 120,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/Group 1171274978.png'),
+                      Text("Fitness Appointment")
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle, // Default shape is rectangle
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFFFFD4C6), // Rounded corners (optional)
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: Container(
+                  // width: 180,
+                   height: 120,
+
+                ),
+              ),
+            ],
           ),
           SizedBox(height: 8),
           Row(
